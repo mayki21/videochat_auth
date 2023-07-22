@@ -15,6 +15,9 @@ app.use(cors())
 app.use("/user", userRouter)
 
 // app.use("/", postRouter)
+app.get("/start",(req,res)=>{
+    res.status(200).send({msg:"server has been started"})
+})
 
 app.listen(process.env.port, async () => {
     try {
